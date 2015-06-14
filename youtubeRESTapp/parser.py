@@ -47,10 +47,13 @@ class Parser(object):
                     itags.append(item)
         #Creating the response from here
         result=[]
+        title_element = {}
+        title_element['title'] = title.strip();
+        result.append(title_element)
         i = 0
         for itag in itags:
             result_element = {}
-            result_element['itag']=itags[i]
+            result_element['itag']=itags[i][5:]
             result_element['url'] = urls[i]
             i+=1
             result.append(result_element)
