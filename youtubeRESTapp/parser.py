@@ -45,6 +45,7 @@ class Parser(object):
                     urls.append(self.parse_url(item))
                 elif item.startswith('itag'):
                     itags.append(item)
+        #Creating the response from here
         result=[]
         i = 0
         for itag in itags:
